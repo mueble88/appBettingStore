@@ -1,0 +1,34 @@
+
+<h1 mat-dialog-title>ACTUALIZAR DATOS</h1>
+<hr>
+<mat-dialog-content>
+    <form id="upDateform" method="put" >
+        <div>
+            <p>Nombre</p>
+            <input type="text" name="name" placeholder="Nombre" [(ngModel)]="usuarioActual.name" >
+        </div>
+        <div>
+            <p>Apellidos</p>
+            <input type="text" name="lastName"  placeholder="Apellidos" [(ngModel)]="usuarioActual.lastName">
+        </div>
+        <div>
+            <p>Correo</p>
+            <input type="email" name="email"  placeholder="E-mail" [(ngModel)]="usuarioActual.email">
+        </div>
+        <div>
+            <p>Teléfono</p>
+            <input type="text" name="phone"  placeholder="Telefono" [(ngModel)]="usuarioActual.phone">
+        </div>
+        <div>
+            <p>Fecha de nacimiento</p>
+            <input type="date" name="dateOfBirth"  placeholder="fecha de nacimiento" [(ngModel)]="usuarioActual.dateOfBirth">
+        </div>
+
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+<button class="actualizar"  mat-button (click)="actualizar()">Guardar</button>
+<button class="cerrar"  mat-button (click)="cerrar()">Cerrar</button>
+</mat-dialog-actions>
+

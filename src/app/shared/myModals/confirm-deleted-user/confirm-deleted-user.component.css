@@ -1,0 +1,55 @@
+
+h1{
+  color:  #1976d2;
+}
+
+p{
+  color: #000000;
+  padding-top: 20px;
+}
+
+.si {
+  font-family: 'Overpass', sans-serif;
+  font-size: 110%;
+  color:#ffffff;
+  width: 100px;
+  height: 33px;
+  border: none;
+  margin-right: 10px;
+
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+
+  background-color:#1976d2;
+
+  margin-top: 10px;
+}
+
+.si:hover {
+  background-color:#f9544b;
+  color:#ffffff;
+}
+
+.no {
+  font-family: 'Overpass', sans-serif;
+  font-size: 110%;
+  color:#ffffff;
+  width: 100px;
+  height: 33px;
+  border: none;
+  margin-right: 10px;
+
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+
+  background-color:#1976d2;
+
+  margin-top: 10px;
+}
+
+.no:hover {
+  background-color:#f9544b;
+  color:#ffffff;
+}

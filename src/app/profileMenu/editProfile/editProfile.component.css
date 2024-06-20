@@ -1,0 +1,141 @@
+.profileheader{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border: 1px solid #e7e4e4;
+}
+
+.container-img{
+  text-align: center;
+}
+
+img{
+  width: 60%;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.addphoto{
+  float:inline-end;
+  height: 40px;
+  width: 40px;
+  border-style: none;
+  background-color: #e7e4e4;
+  border-radius: 100px;
+  text-align: center;
+  /* border:2px solid #040404; */
+}
+
+.photo{
+  width: 22px;
+  opacity: 0.5;
+}
+
+.profile {
+  border-radius:150px;
+  border:3px solid #040404;
+}
+
+.containerleft{
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+.cardleft{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  width: 98%;
+  position:static;
+  border-radius: 10px;
+  background-color: rgb(248, 243, 243);
+  border-style: none;
+}
+
+.feed{
+  margin-top: 10px;
+  padding-top: 50px;
+  border: 1px solid #e7e4e4;
+}
+
+.card{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  width: 98%;
+  position:static;
+  border-radius: 10px;
+  background-color: rgb(248, 243, 243);
+  border-style: none;
+  /* background-color: #f1f1f1; */
+  /* top: 50%;
+  left: 50%; */
+  /* box-shadow: 1px 2px 3px; */
+  /* border-style: none; */
+}
+
+input{
+  margin-top: 30px;
+  width: 95%;
+  height: 40px;
+  border-radius: 20px;
+  border-style: none;
+  background-color: rgb(236, 236, 236);
+}
+
+hr{
+  width: 90%;
+  margin-left: 5%;
+}
+
+.addphotolibrary{
+  width: 40px;
+  border-style: none;
+  border-radius: 100px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.photolibrary{
+  width: 22px;
+  opacity: 0.5;
+}
+
+.ico{
+  color:#a4a4a4;
+}
+
+/* variacion de tamaño de iconos */
+
+.ico-1x{
+  font-size: 1.5em;
+}
+.ico-2x{
+  font-size: 2em;
+}
+.ico-3x{
+  font-size: 3em;
+}
+.ico-4x{
+  font-size: 4em;
+}
+.ico-5x{
+  font-size: 5em;
+}
+.ico-6x{
+  font-size: 6em;
+}
+.ico-7x{
+  font-size: 7em;
+}
+.ico-8x{
+  font-size: 8em;
+}
+.ico-9x{
+  font-size: 9em;
+}
+.ico-10x{
+  font-size: 10em;
+}

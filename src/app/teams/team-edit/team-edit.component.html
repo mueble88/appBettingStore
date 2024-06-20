@@ -1,0 +1,140 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+
+      <div id="contenedor">
+        <div id="central">
+            <div id="updateTeam">
+                <div class="titulo">
+                  EDITAR DATOS
+                </div>
+                <div class="parrafo">
+                    Ingresa los datos requeridos para el cambio de equipo y sus rutas de perfil.
+                </div>
+
+                <form [formGroup]="teamForm" action="" method="post" enctype="multipart/form-data">
+
+                  <div class="containerInput">
+                    <div class="row" >
+                      <div class="col-7">
+
+                        <div class="colum1">
+                          <label>Nombre de equipo de futbol</label>
+                          <input formControlName="name" class="text" type="text" name="name"  placeholder="Ingrese su el nombre del equipo">
+                          <div class="alert-danger" *ngIf="name.invalid && (name.dirty || name.touched)">
+                            <p class="container-error-message" *ngIf="name.errors?.['required']" >
+                              *El nombre del equipo es requerido
+                             </p>
+                             <p class="container-error-message" *ngIf="name.errors?.['minlength']" >
+                              *Minimo 3 caracteres.
+                             </p>
+                             <p class="container-error-message" *ngIf="name.errors?.['maxlength']" >
+                              *Máximo 40 caracteres.
+                             </p>
+                          </div>
+                          <div class="alert-danger" >
+                            <p class="container-error-message">{{messageName}}</p>
+                          </div>
+                        </div>
+
+                        <div class="colum1">
+                          <label>Nombre del director técnico</label>
+                          <input formControlName="dt" class="text" type="text" name="dt" placeholder="Ingrese el nombre del director">
+                          <div class="alert-danger" *ngIf="dt.invalid && (dt.dirty || dt.touched)">
+                            <p class="container-error-message" *ngIf="dt.errors?.['required']" >
+                              *El nombre del director
+                             </p>
+                             <p class="container-error-message" *ngIf="dt.errors?.['minlength']" >
+                              *Minimo 3 caracteres.
+                             </p>
+                             <p class="container-error-message" *ngIf="dt.errors?.['maxlength']" >
+                              *Máximo 30 caracteres.
+                             </p>
+                          </div>
+                          <div class="alert-danger" >
+                            <p class="container-error-message">{{messageDt}}</p>
+                          </div>
+                        </div>
+
+                        <h1 class="colum1">RUTAS DE PERFIL</h1>
+
+                        <div class="colum1">
+                          <label>Ruta del facebook</label>
+                          <input class="text" type="text" name="facebook" placeholder="Ingrese el link del facebook">
+                          <div class="alert-danger" >
+                            <p class="container-error-message">{{messageFacebook}}</p>
+                          </div>
+                        </div>
+
+                        <div class="colum1">
+                          <label>Ruta del instagram</label>
+                            <input class="text" type="text" name="instagram"  placeholder="Ingrese el link del instagram">
+                            <div class="alert-danger" >
+                              <p class="container-error-message">{{messageInstagram}}</p>
+                            </div>
+                        </div>
+
+                        <div class="colum1">
+                          <label>Ruta de google</label>
+                            <input class="text" type="text" name="google"  placeholder="Ingrese el link de google">
+                            <div class="alert-danger" >
+                              <p class="container-error-message">{{messageGoogle}}</p>
+                            </div>
+                        </div>
+
+                      </div>
+
+                      <div class="col-3" id="colum2">
+
+                        <ngx-dropzone class="dropzone" (change)="onSelect($event)">
+                          <ngx-dropzone-label>Selecciona el archivo</ngx-dropzone-label>
+                          <ngx-dropzone-image-preview class="img" *ngFor="let file of imageFile"  [file]="file" [removable]="true" (removed)="onRemove(file)">
+
+                          </ngx-dropzone-image-preview>
+                          <!-- <ngx-dropzone-preview *ngFor="let file of files" [removable]="true" (removed)="onRemove(file)">
+                            <ngx-dropzone-label>{{ file.name }} ({{ file.type }})</ngx-dropzone-label>
+                          </ngx-dropzone-preview> -->
+                        </ngx-dropzone>
+
+                        <!-- <div class="file">
+                          <input class="inputFile" (change)="captureFile($event)" type="file" name="shield">
+                        </div> -->
+
+                        <div class="boton1">
+                          <button class="actualizar" type="submit"  (click)="actualizar()" [disabled]="loading">Actualizar</button>
+                        </div>
+
+                        <div class="boton2">
+                          <button class="cerrar" type="submit"  (click)="cerrar()">Cancelar</button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </form>
+            </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-1"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

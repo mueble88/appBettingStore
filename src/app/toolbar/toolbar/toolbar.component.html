@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark" *ngIf="this.currentUser == true"> <!-- responsive and color-->
+  <div class="container-fluid" >
+    <a class="navbar-brand" >
+      <img src="assets/logoLucky.png" alt="logoLucky" class="icon">
+      LUCKY SPORTS BETTING
+    </a>
+
+    <div class="collapse navbar-collapse">
+      <div class="navbar-nav">
+        <a class="nav-link"   routerLink="users" >Users</a>
+        <a class="nav-link"   routerLink="teams">Teams</a>
+      </div>
+    </div>
+
+    <!-- <img class="profile" src="assets/profile3.png" alt="profile"> -->
+    <span class="ico ico-profile ico-1x"></span>
+    <div class="menu">
+      <app-menu></app-menu>
+    </div>
+
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+
+
+

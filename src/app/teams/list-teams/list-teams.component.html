@@ -1,0 +1,111 @@
+
+
+<div class="container1">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+
+      <div class="tabla">
+        <mat-grid-list  cols="4" rowHeight="50px">
+
+          <mat-grid-tile class="titulo">
+            <div class="row">
+              <div class="colmTitulo col-8">
+                Teams
+              </div>
+              <div class="col-4">
+                <button class="ordenList" type="submit" (click)="sortAscendingOrDescending(number=0, 'name')">
+                  <span class="ico ico-expandless"></span>
+                </button>
+                <button class="ordenList" type="submit" (click)="sortAscendingOrDescending(number=1, 'name')">
+                  <span class="ico ico-expandmore"></span>
+                </button>
+              </div>
+            </div>
+          </mat-grid-tile>
+
+          <mat-grid-tile class="titulo">
+            <div class="row">
+              <div class="colmTitulo col-8">
+                Technical Manager
+              </div>
+              <div class="col-4">
+                <button class="ordenList" type="submit" (click)="sortAscendingOrDescending(number=0, 'dt')">
+                  <span class="ico ico-expandless"></span>
+                </button>
+                <button class="ordenList" type="submit" (click)="sortAscendingOrDescending(number=1, 'dt')">
+                  <span class="ico ico-expandmore"></span>
+                </button>
+              </div>
+            </div>
+          </mat-grid-tile>
+
+          <mat-grid-tile class="titulo">Social Networks</mat-grid-tile>
+          <mat-grid-tile class="titulo"></mat-grid-tile>
+
+        </mat-grid-list>
+        <!-- | paginate:pageSize:pageNumber -->
+        <mat-grid-list class="cuadricula"  cols="4" rowHeight="50px" *ngFor="let team of teams" >
+
+          <mat-grid-tile class="primerColum" style="text-align:left">
+
+            <div class="escudo">
+              <img class="imgEscudo"  src="data:image/png;base64,{{team.shield.image}}" alt="escudo" >
+            </div>
+            <div class="name">
+              {{team.name}}
+            </div>
+          </mat-grid-tile>
+
+          <mat-grid-tile class="primerColum" style="text-align:left">
+            <div class="name">
+              {{team.dt}}
+            </div>
+          </mat-grid-tile>
+
+          <mat-grid-tile>
+            <a href="{{team.hrefFacebook}}">
+              <img class="redes" src="assets/facebookColor.png" alt="facebook">
+            </a>
+            <a href="{{team.hrefInstagram}}">
+              <img class="redes" src="assets/instagramColor.png" alt="instagram">
+            </a>
+            <a href="{{team.hrefGoogle}}">
+              <img class="redes" src="assets/googleColor.png" alt="google">
+            </a>
+          </mat-grid-tile>
+
+          <mat-grid-tile>
+            <a class="detail" (click)="goToTeamDetails(team.id)">
+              <span class="ico ico-detail"></span>
+            </a>
+            <a class="edit" (click)="goToTeamEdit(team.id)">
+              <span class="ico ico-edit"></span>
+            </a>
+          </mat-grid-tile>
+
+        </mat-grid-list>
+        <hr>
+        <mat-paginator
+              (page)="handlePage($event)"
+              [length]="totalElements"
+              [pageSize]="pageSize"
+              [pageSizeOptions]="pageSizeOptions"
+              [pageIndex]="pageNumber"
+              previousLabel="Anterior"
+              nextLabel="Siguiente"
+              aria-label="Select page">
+        </mat-paginator>
+
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
+
+
+
+
+
+
+

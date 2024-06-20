@@ -1,0 +1,30 @@
+<div class="container">
+
+  <h1>EDITAR DATOS</h1>
+  <hr>
+  <mat-dialog-content>
+      <form  method="post" enctype="multipart/form-data">
+        <h2 mat-dialog-title>DATOS DE EQUIPO</h2>
+          <div>
+              <p>Nombre de equipo de futbol</p>
+              <input class="text" type="text" name="name"  [(ngModel)]="name" >
+          </div>
+          <div>
+              <p>Nombre del director técnico</p>
+              <input class="text" type="text" name="dt"  [(ngModel)]="dt">
+          </div>
+        <h2>DATOS DE IMAGEN</h2>
+          <div>
+              <p>Escudo</p>
+              <input (change)="captureFile($event)" type="file" name="shield">
+          </div>
+      </form>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button class="actualizar"  mat-button [disabled]="loading" (click)="actualizar()">Actualizar</button>
+    <button class="cerrar"  mat-button (click)="cerrar()">Cancelar</button>
+</mat-dialog-actions>
+</div>
+
+

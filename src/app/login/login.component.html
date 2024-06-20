@@ -1,0 +1,69 @@
+
+<div id="contenedor">
+  <div id="central">
+      <div id="login">
+          <div class="titulo">
+              Bienvenido
+          </div>
+          <div class="parrafo">
+              Ingresa tus datos si ya estas registrado
+          </div>
+
+          <!-- Formulario -->
+          <form [formGroup]="userForm" (ngSubmit)="login()" method="post">
+
+            <input formControlName="email" type="email" name="email" placeholder=" Tu correo">
+            <div class="alert-danger" *ngIf="email.invalid && (email.touched || email.dirty )">
+              <p class="container-error-message" *ngIf="email.errors?.['required']" >
+               *El correo es requerido
+              </p>
+              <p class="container-error-message" *ngIf="email.errors?.['minlength']">
+               *Minimo 11 caracteres.
+              </p>
+              <p class="container-error-message" *ngIf="email.errors?.['pattern'] && email.errors?.['email']">
+                *Correo no valido
+              </p>
+            </div>
+
+            <input formControlName="password" type="password" name="password"  placeholder=" Tu contraseña">
+            <div class="alert-danger" *ngIf="password.invalid && (password.dirty || password.touched)" >
+              <p class="container-error-message" *ngIf="password.errors?.['required']" >
+                *La contraseña es requerida
+              </p>
+              <p class="container-error-message" *ngIf="password.errors?.['minlength']" >
+                *Minimo 3 caracteres.
+              </p>
+              <p class="container-error-message" *ngIf="password.errors?.['maxlength']" >
+                *Máximo 10 caracteres.
+              </p>
+            </div>
+            <button type="submit">Ingresar</button>
+
+          </form>
+
+          <div class="pie-form">
+            <div class="alert-danger">
+              <p class="container-error-message">{{message}}</p>
+            </div>
+            <div class="alert-danger">
+              <p class="container-error-message">{{messageError}}</p>
+            </div>
+              <a href="#">¿Perdiste tu contraseña?</a>
+              <a href="#">¿No tienes Cuenta? Registrate</a>
+          </div>
+      </div>
+      <div class="inferior">
+          <a href="">Volver</a>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

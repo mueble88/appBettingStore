@@ -1,0 +1,26 @@
+button {
+  background-color: white;
+  width: 30px;
+  text-decoration-line: none;
+  text-decoration-style: none;
+  border-bottom: none;
+  border: none;
+}
+
+img{
+  width: 20px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.ico{
+  color: white;
+  font-size: 1.5em;
+  color:#343434;
+}
+
+.ico:hover{
+  color: #1976d2;
+}

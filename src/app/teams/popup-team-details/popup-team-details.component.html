@@ -1,0 +1,29 @@
+
+<div class="container">
+  <h1 mat-dialog-title>DATOS DE EQUIPO DE FUTBOL</h1>
+  <hr>
+  <mat-dialog-content>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>EQUIPO DE FUTBOL:</th>
+          <th>{{name}}</th>
+        </tr>
+        <tr>
+          <th>DIRECTOR TÉCNICO:</th>
+          <th>{{dt}}</th>
+        </tr>
+        <tr>
+          <th class="escudo">ESCUDO:</th>
+          <th><img src="data:image/png;base64,{{shield}}" alt="escudo"></th>
+        </tr>
+      </thead>
+    </table>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+  <button class="cerrar"  mat-button (click)="cerrar()">Cerrar</button>
+  </mat-dialog-actions>
+</div>
+
+

@@ -1,0 +1,202 @@
+
+<div class="container1">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+
+      <div class="tabla">
+        <mat-grid-list  cols="8" rowHeight="50px">
+
+          <mat-grid-tile class="titulo">
+            <div class="row">
+              <div class="colmTitulo col-8">
+                Name
+              </div>
+              <div class="col-4">
+                <button class="ordenList" type="submit" (click)="sortAscendingOrDescending(number=0, 'name')">
+                  <span class="ico ico-expandless"></span>
+                </button>
+                <button class="ordenList" type="submit" (click)="sortAscendingOrDescending(number=1, 'name')">
+                  <span class="ico ico-expandmore"></span>
+                </button>
+              </div>
+            </div>
+          </mat-grid-tile>
+
+          <mat-grid-tile class="titulo">
+            <div class="row">
+              <div class="colmTitulo col-8">
+                Last Name
+              </div>
+              <div class="col-4">
+                <button class="ordenList" type="submit" (click)="sortAscendingOrDescending(number=0, 'lastName')">
+                  <span class="ico ico-expandless"></span>
+                </button>
+                <button class="ordenList" type="submit" (click)="sortAscendingOrDescending(number=1, 'lastName')">
+                  <span class="ico ico-expandmore"></span>
+                </button>
+              </div>
+            </div>
+          </mat-grid-tile>
+
+          <mat-grid-tile class="titulo">
+            <div class="row">
+              <div class="colmTitulo col-8">
+                Email
+              </div>
+              <div class="col-4">
+                <button class="ordenList" type="submit" (click)="sortAscendingOrDescending(number=0, 'email')">
+                  <span class="ico ico-expandless"></span>
+                </button>
+                <button class="ordenList" type="submit" (click)="sortAscendingOrDescending(number=1, 'email')">
+                  <span class="ico ico-expandmore"></span>
+                </button>
+              </div>
+            </div>
+          </mat-grid-tile>
+
+          <mat-grid-tile class="titulo">
+            <div class="row">
+              <div class="colmTitulo col-8">
+                Phone
+              </div>
+              <div class="col-4">
+                <button class="ordenList" type="submit" (click)="sortAscendingOrDescending(number=0, 'phone')">
+                  <span class="ico ico-expandless"></span>
+                </button>
+                <button class="ordenList" type="submit" (click)="sortAscendingOrDescending(number=1, 'phone')">
+                  <span class="ico ico-expandmore"></span>
+                </button>
+              </div>
+            </div>
+          </mat-grid-tile>
+
+          <mat-grid-tile class="titulo">
+            <div class="row">
+              <div class="colmTitulo col-8">
+                Date Of Birth
+              </div>
+              <div class="col-4">
+                <button class="ordenList" type="submit" (click)="sortAscendingOrDescending(number=0, 'dateOfBirth')">
+                  <span class="ico ico-expandless"></span>
+                </button>
+                <button class="ordenList" type="submit" (click)="sortAscendingOrDescending(number=1, 'dateOfBirth')">
+                  <span class="ico ico-expandmore"></span>
+                </button>
+              </div>
+            </div>
+          </mat-grid-tile>
+
+          <mat-grid-tile class="titulo">Created At</mat-grid-tile>
+          <mat-grid-tile class="titulo">Last Updated At</mat-grid-tile>
+          <mat-grid-tile class="titulo"></mat-grid-tile>
+
+        </mat-grid-list>
+        <mat-grid-list class="cuadricula"  cols="8" rowHeight="50px" *ngFor="let usuario of usuarios">
+
+          <mat-grid-tile class="primerColum" style="text-align:left">
+            <div class="name">{{usuario.name}}</div>
+          </mat-grid-tile>
+
+          <mat-grid-tile class="primerColum" style="text-align:left">
+            <div class="name">{{usuario.lastName}}</div>
+          </mat-grid-tile>
+
+          <mat-grid-tile class="primerColum" style="text-align:left">
+            <div class="name">{{usuario.email}}</div>
+          </mat-grid-tile>
+
+          <mat-grid-tile class="primerColum" style="text-align:left">
+            <div class="name">{{usuario.phone}}</div>
+          </mat-grid-tile>
+
+          <mat-grid-tile class="primerColum" style="text-align:left">
+            <div class="name">{{usuario.dateOfBirth | date:'dd-MM-yyyy'}}</div>
+          </mat-grid-tile>
+
+          <mat-grid-tile class="primerColum" style="text-align:left">
+            <div class="name">{{usuario.createdAtDate | date:'dd-MM-yyyy hh:mm:ss'}}</div>
+          </mat-grid-tile>
+
+          <mat-grid-tile class="primerColum" style="text-align:left">
+            <div class="name">{{usuario.lastUpdatedAtDate | date:'dd-MM-yyyy hh:mm:ss'}}</div>
+          </mat-grid-tile>
+
+          <mat-grid-tile>
+            <app-button-update
+              [usuario]="usuario"
+              (onUserUpdated)="loadUsers()">
+            </app-button-update>
+
+            <app-button-delete
+              [id]="usuario.id"
+              (onUserDeleted)="loadUsers()">
+            </app-button-delete>
+          </mat-grid-tile>
+
+        </mat-grid-list>
+        <hr>
+        <mat-paginator
+              (page)="handlePage($event)"
+              [length]="totalElements"
+              [pageSize]="pageSize"
+              [pageSizeOptions]="pageSizeOptions"
+              [pageIndex]="pageNumber"
+              previousLabel="Anterior"
+              nextLabel="Siguiente"
+              aria-label="Select page">
+        </mat-paginator>
+
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
+
+
+<!--
+<div class="container">
+  <h1>{{titulo}}</h1>
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">E-mail</th>
+          <th scope="col">Teléfono</th>
+          <th scope="col">Fecha de nacimiento</th>
+          <th scope="col">Feche de creación</th>
+          <th scope="col">Fecha de modificación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios" >
+          <th scope="row">{{usuario.id}}</th>
+          <td>{{usuario.name}}</td>
+          <td>{{usuario.lastName}}</td>
+          <td>{{usuario.email}}</td>
+          <td>{{usuario.phone}}</td>
+          <td>{{usuario.dateOfBirth | date:'dd-MM-yyyy'}}</td>
+          <td>{{usuario.createdAtDate | date:'dd-MM-yyyy hh:mm:ss'}}</td>
+          <td>{{usuario.lastUpdatedAtDate | date:'dd-MM-yyyy hh:mm:ss'}}</td>
+          <td>
+            <app-button-update
+              [usuario]="usuario"
+              (onUserUpdated)="loadUsers()"
+            ></app-button-update>
+          </td>
+          <td>
+            <app-button-delete
+              [id]="usuario.id"
+              (onUserDeleted)="loadUsers()">
+            </app-button-delete>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+-->

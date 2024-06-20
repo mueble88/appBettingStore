@@ -1,0 +1,91 @@
+
+.tabla{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid #e7e4e4;
+}
+
+.cuadricula{
+  border-top: 1px solid #e7e4e4;
+}
+
+.titulo {
+  background:rgb(238, 237, 237);
+  color: #1976d2;
+}
+
+.colmTitulo{
+  flex:auto;
+  padding-top: 19px;
+}
+
+.ordenList{
+  background:rgb(238, 237, 237);
+  color: #1976d2;
+  outline:none;
+  border-style: none;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.escudo{
+  padding-right: 20px;
+  position: absolute;
+  left: 5px;
+}
+
+.name{
+  font-size: 15px;
+  font-family:sans-serif;
+  color: rgb(103, 103, 103);
+  text-align: left;
+  position: absolute;
+  left: 80px;
+}
+
+.imgEscudo{
+  width: 30px;
+  text-align: right;
+  padding-right: 1px;
+}
+
+a{
+  list-style: none;
+  display: inline-block;
+  margin: .8em .8em;
+  text-decoration:none;
+}
+
+.redes{
+  width: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px ;
+}
+
+.redes:hover{
+  width: 20px;
+  transform: scale(1.2);
+}
+
+.ico{
+  color: white;
+  font-size: 1.5em;
+  color:#343434;
+  padding-top: 1px;
+}
+
+.ico:hover{
+  color: #1976d2;
+}
+
+.edit:hover{
+  transform: scale(1.1);
+}
+
+.detail:hover{
+  transform: scale(1.1);
+  text-decoration:none;
+}
+
+
+

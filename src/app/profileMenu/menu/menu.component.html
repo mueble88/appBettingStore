@@ -1,0 +1,32 @@
+<div >
+
+  <div class="row">
+    <div class="col">
+      <button class="buttonIcon nav-link active" style="border: none;" mat-icon-button [matMenuTriggerFor]="menu">
+        <div class="nav-link active">{{nombreUsuario}} {{apellidoUsuario}}</div>
+        <!-- <mat-icon>account_circle</mat-icon> -->
+      </button>
+    </div>
+  </div>
+
+  <mat-menu #menu="matMenu">
+
+    <a mat-menu-item (click)="goChangePassword()">
+      <mat-icon>vpn_key</mat-icon>
+      <span>Change password</span>
+    </a>
+
+    <div>
+      <app-logout></app-logout>
+    </div>
+
+    <a mat-menu-item (click)="goEditProfile()">
+      <mat-icon>account_circle</mat-icon>
+      <span>Profile</span>
+    </a>
+
+  </mat-menu>
+
+ </div>
+
+

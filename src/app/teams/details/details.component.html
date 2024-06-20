@@ -1,0 +1,73 @@
+
+
+<div class="container-fluid">
+  <div class="row mb-3">
+    <div class="col-md-1"></div>
+    <div class="col-md-3">
+
+      <div class="cardperfil">
+        <header class="headercard1">
+          <img src="data:image/png;base64,{{shield}}" alt="escudo">
+        </header>
+
+        <section>
+          <!-- <h2>DATOS DE EQUIPO DE FUTBOL</h2> -->
+          <h3>{{name}}</h3>
+          <h3>Director técnico:{{dt}}</h3>
+        </section>
+
+        <ul>
+          <li>
+            <a href="{{hrefFacebook}}">
+              <img class="redes" src="assets/facebookColor.png" alt="facebook-color">
+              <!-- <img class="redes" src="assets/facebook.png" alt="facebook" > -->
+            </a>
+          </li>
+          <li>
+            <a href="{{hrefInstagram}}">
+              <img class="redes" src="assets/instagramColor.png" alt="instagram-color">
+              <!-- <img class="redes" src="assets/instagram.png" alt="instagram"> -->
+            </a>
+          </li>
+          <li>
+            <a href="{{hrefGoogle}}">
+              <img class="redes" src="assets/googleColor.png" alt="google-color">
+              <!-- <img class="redes" src="assets/social.png" alt="google"> -->
+            </a>
+          </li>
+        </ul>
+
+        <footer>
+          <div>
+            <p>
+              LUCKY SPORTS BETTING
+            </p>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+
+    <div class="col-md-7">
+      <div class="cardfeed">
+        <header>
+          <input class="estado" type="text | image | file" [(ngModel)]="text" placeholder="¿what are you thinking?">
+        </header>
+
+        <div class="row">
+          <div class="col">
+            <button class="addphotolibrary" type="submit">
+              <span class="ico ico-photolibrary ico-1x"></span>
+            </button>
+            Photo/video
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md- 1"></div>
+  </div>
+</div>
+
+
